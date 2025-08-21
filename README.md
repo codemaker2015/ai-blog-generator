@@ -27,12 +27,19 @@ Before running the application, ensure you have:
 
 1. **Clone the repository** (or save the code file):
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/codemaker2015/ai-blog-generator
    cd ai-blog-generator
    ```
 
 2. **Install required dependencies**:
+   Install dependencies (using [uv](https://github.com/astral-sh/uv) or pip):  
    ```bash
+   uv venv
+   .venv\Scripts\activate
+   uv sync
+   ```
+   or 
+   ```
    pip install streamlit crewai crewai-tools python-docx python-dotenv
    ```
 
@@ -85,16 +92,6 @@ The application uses a two-agent system powered by CrewAI:
   - Incorporates proper citations and formatting
   - Structures content with clear headings and sections
 - **Output**: Polished blog post in markdown format with inline citations
-
-## 📁 Project Structure
-
-```
-ai-blog-generator/
-├── app.py                 # Main Streamlit application
-├── .env                   # Environment variables (API keys)
-├── requirements.txt       # Python dependencies (optional)
-└── README.md             # This file
-```
 
 ## 🔄 Workflow
 
